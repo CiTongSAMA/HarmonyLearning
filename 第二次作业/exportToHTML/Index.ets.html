@@ -1,0 +1,76 @@
+<html>
+<head>
+<title>Index.ets</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #a9b7c6;}
+.s1 { color: #aa7dfc;}
+.s2 { color: #e2da90;}
+.s3 { color: #bbb529;}
+.s4 { color: #faa23d;}
+.s5 { color: #db7e9b;}
+.s6 { color: #b3e54c;}
+</style>
+</head>
+<body bgcolor="#2b2b2b">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+Index.ets</font>
+</center></td></tr></table>
+<pre><span class="s0">import router from </span><span class="s1">'@ohos.router'</span><span class="s2">;</span>
+<span class="s3">@</span><span class="s0">Entry</span>
+<span class="s3">@</span><span class="s0">Component</span>
+<span class="s0">struct Index </span><span class="s4">{</span>
+  <span class="s3">@</span><span class="s0">State PlayerName</span><span class="s2">: </span><span class="s0">string </span><span class="s2">=</span><span class="s1">''</span>
+
+
+  <span class="s0">build</span><span class="s5">() </span><span class="s4">{</span>
+    <span class="s0">Column</span><span class="s5">(</span><span class="s4">{</span><span class="s0">space</span><span class="s2">:</span><span class="s6">10</span><span class="s4">}</span><span class="s5">)</span><span class="s4">{</span>
+
+      <span class="s0">Column</span><span class="s5">(</span><span class="s4">{</span><span class="s0">space</span><span class="s2">:</span><span class="s6">10</span><span class="s4">}</span><span class="s5">)</span><span class="s4">{</span>
+        <span class="s0">Text</span><span class="s5">(</span><span class="s1">'积分抽奖'</span><span class="s5">)</span><span class="s2">.</span><span class="s0">fontSize</span><span class="s5">(</span><span class="s6">40</span><span class="s5">)</span><span class="s2">.</span><span class="s0">fontWeight</span><span class="s5">(</span><span class="s6">700</span><span class="s5">)</span><span class="s2">.</span><span class="s0">margin</span><span class="s5">(</span><span class="s4">{</span><span class="s0">top</span><span class="s2">:</span><span class="s6">20</span><span class="s4">}</span><span class="s5">)</span>
+      <span class="s4">}</span>
+
+      <span class="s0">Row</span><span class="s5">(</span><span class="s4">{ </span><span class="s0">space</span><span class="s2">: </span><span class="s6">10 </span><span class="s4">}</span><span class="s5">) </span><span class="s4">{</span>
+        <span class="s0">Button</span><span class="s5">(</span><span class="s1">'心'</span><span class="s5">)</span>
+          <span class="s2">.</span><span class="s0">type</span><span class="s5">(</span><span class="s0">ButtonType</span><span class="s2">.</span><span class="s0">Normal</span><span class="s5">)</span><span class="s2">.</span><span class="s0">width</span><span class="s5">(</span><span class="s1">'40%'</span><span class="s5">)</span><span class="s2">.</span><span class="s0">height</span><span class="s5">(</span><span class="s1">'20%'</span><span class="s5">)</span><span class="s2">.</span><span class="s0">fontSize</span><span class="s5">(</span><span class="s6">40</span><span class="s5">)</span><span class="s2">.</span><span class="s0">fontWeight</span><span class="s5">(</span><span class="s6">600</span><span class="s5">)</span>
+          <span class="s2">.</span><span class="s0">borderRadius</span><span class="s5">(</span><span class="s6">8</span><span class="s5">)</span><span class="s2">.</span><span class="s0">shadow</span><span class="s5">(</span><span class="s4">{</span><span class="s0">radius</span><span class="s2">:</span><span class="s6">8</span><span class="s2">,</span><span class="s0">color</span><span class="s2">:</span><span class="s5">0xabcdef</span><span class="s2">,</span><span class="s0">offsetX</span><span class="s2">:</span><span class="s6">20</span><span class="s2">,</span><span class="s0">offsetY</span><span class="s2">:</span><span class="s6">20</span><span class="s4">}</span><span class="s5">)</span>
+          <span class="s2">.</span><span class="s0">backgroundColor</span><span class="s5">(</span><span class="s0">Color</span><span class="s2">.</span><span class="s0">Red</span><span class="s5">)</span>
+        <span class="s0">Button</span><span class="s5">(</span><span class="s1">'想'</span><span class="s5">)</span>
+          <span class="s2">.</span><span class="s0">type</span><span class="s5">(</span><span class="s0">ButtonType</span><span class="s2">.</span><span class="s0">Normal</span><span class="s5">)</span><span class="s2">.</span><span class="s0">width</span><span class="s5">(</span><span class="s1">'40%'</span><span class="s5">)</span><span class="s2">.</span><span class="s0">height</span><span class="s5">(</span><span class="s1">'20%'</span><span class="s5">)</span><span class="s2">.</span><span class="s0">fontSize</span><span class="s5">(</span><span class="s6">40</span><span class="s5">)</span><span class="s2">.</span><span class="s0">fontWeight</span><span class="s5">(</span><span class="s6">600</span><span class="s5">)</span>
+          <span class="s2">.</span><span class="s0">borderRadius</span><span class="s5">(</span><span class="s6">8</span><span class="s5">)</span><span class="s2">.</span><span class="s0">shadow</span><span class="s5">(</span><span class="s4">{</span><span class="s0">radius</span><span class="s2">:</span><span class="s6">8</span><span class="s2">,</span><span class="s0">color</span><span class="s2">:</span><span class="s5">0xabcdef</span><span class="s2">,</span><span class="s0">offsetX</span><span class="s2">:</span><span class="s6">20</span><span class="s2">,</span><span class="s0">offsetY</span><span class="s2">:</span><span class="s6">20</span><span class="s4">}</span><span class="s5">)</span>
+          <span class="s2">.</span><span class="s0">backgroundColor</span><span class="s5">(</span><span class="s0">Color</span><span class="s2">.</span><span class="s0">Brown</span><span class="s5">)</span>
+      <span class="s4">}</span>
+
+      <span class="s0">Row</span><span class="s5">(</span><span class="s4">{</span><span class="s0">space</span><span class="s2">:</span><span class="s6">10</span><span class="s4">}</span><span class="s5">)</span><span class="s4">{</span>
+        <span class="s0">Button</span><span class="s5">(</span><span class="s1">'事'</span><span class="s5">)</span>
+          <span class="s2">.</span><span class="s0">type</span><span class="s5">(</span><span class="s0">ButtonType</span><span class="s2">.</span><span class="s0">Normal</span><span class="s5">)</span><span class="s2">.</span><span class="s0">width</span><span class="s5">(</span><span class="s1">'40%'</span><span class="s5">)</span><span class="s2">.</span><span class="s0">height</span><span class="s5">(</span><span class="s1">'20%'</span><span class="s5">)</span><span class="s2">.</span><span class="s0">fontSize</span><span class="s5">(</span><span class="s6">40</span><span class="s5">)</span><span class="s2">.</span><span class="s0">fontWeight</span><span class="s5">(</span><span class="s6">600</span><span class="s5">)</span>
+          <span class="s2">.</span><span class="s0">borderRadius</span><span class="s5">(</span><span class="s6">8</span><span class="s5">)</span><span class="s2">.</span><span class="s0">shadow</span><span class="s5">(</span><span class="s4">{</span><span class="s0">radius</span><span class="s2">:</span><span class="s6">8</span><span class="s2">,</span><span class="s0">color</span><span class="s2">:</span><span class="s5">0xabcdef</span><span class="s2">,</span><span class="s0">offsetX</span><span class="s2">:</span><span class="s6">20</span><span class="s2">,</span><span class="s0">offsetY</span><span class="s2">:</span><span class="s6">20</span><span class="s4">}</span><span class="s5">)</span>
+          <span class="s2">.</span><span class="s0">backgroundColor</span><span class="s5">(</span><span class="s0">Color</span><span class="s2">.</span><span class="s0">Blue</span><span class="s5">)</span>
+        <span class="s0">Button</span><span class="s5">(</span><span class="s1">'成'</span><span class="s5">)</span>
+          <span class="s2">.</span><span class="s0">type</span><span class="s5">(</span><span class="s0">ButtonType</span><span class="s2">.</span><span class="s0">Normal</span><span class="s5">)</span><span class="s2">.</span><span class="s0">width</span><span class="s5">(</span><span class="s1">'40%'</span><span class="s5">)</span><span class="s2">.</span><span class="s0">height</span><span class="s5">(</span><span class="s1">'20%'</span><span class="s5">)</span><span class="s2">.</span><span class="s0">fontSize</span><span class="s5">(</span><span class="s6">40</span><span class="s5">)</span><span class="s2">.</span><span class="s0">fontWeight</span><span class="s5">(</span><span class="s6">600</span><span class="s5">)</span>
+          <span class="s2">.</span><span class="s0">borderRadius</span><span class="s5">(</span><span class="s6">8</span><span class="s5">)</span><span class="s2">.</span><span class="s0">shadow</span><span class="s5">(</span><span class="s4">{</span><span class="s0">radius</span><span class="s2">:</span><span class="s6">8</span><span class="s2">,</span><span class="s0">color</span><span class="s2">:</span><span class="s5">0xabcdef</span><span class="s2">,</span><span class="s0">offsetX</span><span class="s2">:</span><span class="s6">20</span><span class="s2">,</span><span class="s0">offsetY</span><span class="s2">:</span><span class="s6">20</span><span class="s4">}</span><span class="s5">)</span>
+          <span class="s2">.</span><span class="s0">backgroundColor</span><span class="s5">(</span><span class="s0">Color</span><span class="s2">.</span><span class="s0">Orange</span><span class="s5">)</span>
+      <span class="s4">}</span>
+
+      <span class="s0">TextInput</span><span class="s5">(</span><span class="s4">{</span><span class="s0">placeholder</span><span class="s2">:</span><span class="s1">'你的名字'</span><span class="s4">}</span><span class="s5">)</span>
+      <span class="s2">.</span><span class="s0">height</span><span class="s5">(</span><span class="s1">'50'</span><span class="s5">)</span><span class="s2">.</span><span class="s0">width</span><span class="s5">(</span><span class="s1">'60%'</span><span class="s5">)</span><span class="s2">.</span><span class="s0">margin</span><span class="s5">(</span><span class="s6">20</span><span class="s5">)</span><span class="s2">.</span><span class="s0">onChange</span><span class="s5">((</span><span class="s0">value</span><span class="s5">)</span><span class="s2">=&gt;</span><span class="s4">{</span><span class="s0">this</span><span class="s2">.</span><span class="s0">PlayerName</span><span class="s2">=</span><span class="s0">value</span><span class="s4">}</span><span class="s5">)</span>
+
+      <span class="s0">Button</span><span class="s5">(</span><span class="s1">'Start!'</span><span class="s5">)</span><span class="s2">.</span><span class="s0">onClick</span><span class="s5">(() </span><span class="s2">=&gt; </span><span class="s4">{</span>
+<span class="s0">router</span><span class="s2">.</span><span class="s0">pushUrl</span><span class="s5">(</span><span class="s4">{</span><span class="s0">url</span><span class="s2">:</span><span class="s1">'pages/GamePage'</span><span class="s2">,</span><span class="s0">params</span><span class="s2">:</span><span class="s4">{</span><span class="s0">PlayerNameParam</span><span class="s2">:</span><span class="s0">this</span><span class="s2">.</span><span class="s0">PlayerName</span><span class="s4">}}</span><span class="s5">)</span>
+      <span class="s4">}</span><span class="s5">)</span><span class="s2">.</span><span class="s0">width</span><span class="s5">(</span><span class="s1">'50%'</span><span class="s5">)</span><span class="s2">.</span><span class="s0">height</span><span class="s5">(</span><span class="s6">50</span><span class="s5">)</span><span class="s2">.</span><span class="s0">fontSize</span><span class="s5">(</span><span class="s6">25</span><span class="s5">)</span>
+
+
+
+
+    <span class="s4">}</span><span class="s2">.</span><span class="s0">width</span><span class="s5">(</span><span class="s1">'100%'</span><span class="s5">)</span><span class="s2">.</span><span class="s0">height</span><span class="s5">(</span><span class="s1">'100%'</span><span class="s5">)</span>
+
+
+
+
+
+  <span class="s4">}</span>
+<span class="s4">}</span></pre>
+</body>
+</html>
